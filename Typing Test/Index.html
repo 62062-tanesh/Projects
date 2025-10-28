@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"/>
+</head>
+<body>
+    <div class="timer" id="timer">
+        <i class="fas fa-clock"></i>
+        <span>60</span>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Typing Test</h1>
+            <p class="subtitle">Measure Your Typing Speed and accuracy</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-tachometer-alt stat-icon"></i>
+                <div class="stat-value" id="wpm">0</div>
+                <div class="stat-label">WPM</div>
+            </div>
+
+            <!--New-->
+            <div class="stat-card">
+                <i class="fas fa-bullseye stat-icon"></i>
+                <div class="stat-value" id="accuracy">100</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+
+            <!--New-->
+            <div class="stat-card">
+                <i class="fas fa-keyboard stat-icon"></i>
+                <div class="stat-value" id="characters">0</div>
+                <div class="stat-label">Characters</div>
+            </div>
+
+        </div>
+
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="progress-text" id="progressText">Ready to start</div>
+
+        </div>
+
+        <div class="text-container">
+            <div class="text-content" id="textContent"></div>
+        </div>
+
+
+        <div class="input-section">
+            <input type="text" class="typing-input" id="typingInput" placeholder="click start to begin typing..." disabled autocomplete="off" spellcheck="false">
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="startBtn"> <i class="fas fa-play"></i> Start Test</button>
+
+            <button class="btn btn-secondary" id="resetBtn"> <i class="fas fa-redo"></i> Restart</button>
+        </div>
+    </div>
+
+
+    <div class="results-modal" id="resultsModel">
+        <div class="results-content">
+            <h2 class="results-title">Test! Complete</h2>
+            <div class="results-stats">
+                <div class="results-stat">
+                    <div class="result-stat-value" id="finalWpm">0</div>
+                    <div class="result-stat-lable">WPM</div>
+                </div>
+
+                <div class="results-stat">
+                    <div class="result-stat-value" id="finalAccuracy">100</div>
+                    <div class="result-stat-lable">Accuracy</div>
+                </div>
+
+                <div class="results-stat">
+                    <div class="result-stat-value" id="finalCharacters">0</div>
+                    <div class="result-stat-lable">Characters</div>
+                </div>
+
+            </div>
+
+            <button class="btn btn-primary" onclick="closeResult()">
+                <i class="fas fa-redo"></i> Try Again
+            </button>
+        </div>
+    </div>
+
+    <script src="NewScript.js"></script>
+</body>
+</html>
