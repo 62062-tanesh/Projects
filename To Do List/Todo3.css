@@ -57,3 +57,12 @@ ul li{
     margin-top: 30px;
     font-size: 20px;
 }
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-image: url(File/checked.png);
+
+}
