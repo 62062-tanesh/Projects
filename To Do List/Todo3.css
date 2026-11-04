@@ -17,5 +17,58 @@
     width: 540px;
     margin: 100px auto 80px;
     padding: 40px 30px 70px;
-    
+    border-radius: 10px;
+
+}
+
+.Input{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(227, 227, 227);
+    border-radius: 10px;
+
+
+}
+
+input{
+    background: transparent;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    font-size: 15px;
+
+}
+
+button{
+    background: rgb(1, 99, 197);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+ul li{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
 }
